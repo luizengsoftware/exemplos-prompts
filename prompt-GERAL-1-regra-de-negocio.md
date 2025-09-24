@@ -15,7 +15,7 @@ Produto esperado (gerar em /docs/BusinessRules.md):
 - Cenários BDD (Given/When/Then) para fluxos críticos.
 
 Diagramas:
-- Casos de Uso e Estados em **PlantUML** (@startuml → @enduml).
+- Casos de Uso e Estados em **Mermaid** (```mermaid → ```).
 - Indexar diagramas com links.
 
 Qualidade:

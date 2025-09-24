@@ -2,7 +2,7 @@
 
 Contexto: Projeto .NET/C#. Analise todos os arquivos relevantes: *.sln, *.csproj, Directory.Packages.props, packages.lock.json, global.json, Program.cs, Startup/Extensions, appsettings*.json, Dockerfile, docker-compose, Helm/K8s manifests, pipelines (GitHub Actions/Azure DevOps), *.md.
 
-Objetivo: Mapear tecnologias, dependências e decisões arquiteturais e gerar diagramas no modelo **C4** (C1/C2/C3) com PlantUML (C4-PlantUML).
+Objetivo: Mapear tecnologias, dependências e decisões arquiteturais e gerar diagramas no modelo **C4** (C1/C2/C3) com Mermaid (C4).
 
 Produto esperado (crie em /docs/Architecture.md):
 - "Stack & Dependências"
@@ -11,7 +11,7 @@ Produto esperado (crie em /docs/Architecture.md):
   - Variáveis sensíveis (somente nomes), Feature Flags, Connection Strings (somente chaves), perfis (Dev/QA/Prod).
 - "Estilo Arquitetural"
   - DDD, Clean Architecture, CQRS/Event Sourcing (se houver), camadas, padrões adotados.
-- "C4 Model" (PlantUML):
+- "C4 Model" (Mermaid):
   - **C1 – System Context**: sistemas vizinhos, atores.
   - **C2 – Container**: APIs, BFFs, jobs, DBs, filas, gateways, caches, observabilidade.
   - **C3 – Component** (pelo menos para os containers mais críticos): controllers/handlers, services, repos, adaptadores, módulos.
@@ -22,8 +22,8 @@ Produto esperado (crie em /docs/Architecture.md):
   - Build, testes, qualidade (analyzers, cobertura), artefatos, gates, deploy, rollback.
 
 Instruções de diagrama:
-- Gere **PlantUML** com sintaxe C4-PlantUML (@startuml → !include C4_*.puml → @enduml). Não renderize imagens; entregue o código pronto para renderização.
-- Para cada nível (C1, C2, C3), forneça um bloco PlantUML separado, com legendas e relações rotuladas.
+- Gere **Mermaid** com sintaxe C4 (```mermaid → ```). Não renderize imagens; entregue o código pronto para renderização.
+- Para cada nível (C1, C2, C3), forneça um bloco Mermaid separado, com legendas e relações rotuladas.
 
 Qualidade/checagens:
 - Vincule cada item de tecnologia a evidências: `projeto/arquivo:linha(s)` (por ex.: csproj que referencia pacote, Program.cs que registra middleware, yaml de pipeline).
@@ -31,4 +31,4 @@ Qualidade/checagens:
 - Marque **Decisões de Segurança** (auth, autorização, secrets, CORS, headers, TLS) e **Observabilidade** (logs, tracing, métricas).
 
 Saída final:
-- Arquivo único **/docs/Architecture.md** com TOC, tabelas e diagramas C4 em PlantUML.
+- Arquivo único **/docs/Architecture.md** com TOC, tabelas e diagramas C4 em Mermaid.

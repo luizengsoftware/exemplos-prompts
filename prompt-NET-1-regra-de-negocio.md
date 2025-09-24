@@ -23,10 +23,10 @@ Produto esperado (crie em /docs/BusinessRules.md):
 - "Cenários BDD (Gherkin)" para 5–10 fluxos críticos (Given/When/Then).
 
 Diagramas:
-- Para *Casos de Uso* e *Estados*, gere diagramas **PlantUML** (code blocks @startuml/@enduml).
+- Para *Casos de Uso* e *Estados*, gere diagramas **Mermaid** (code blocks ```mermaid```).
   - Use Case: atores, casos, include/extend.
   - State: estados, eventos, transições, guardas.
-- Inclua um “Índice de Diagramas” com links âncora.
+- Inclua um "Índice de Diagramas" com links âncora.
 
 Qualidade/checagens:
 - Deduplicate e consolide regras repetidas; aponte conflitos e lacunas.
@@ -35,4 +35,4 @@ Qualidade/checagens:
 - Use português (pt-BR) técnico, referências de código no formato `caminho:linha-inicial–linha-final`.
 
 Saída final:
-- Arquivo único **/docs/BusinessRules.md** com sumário (TOC), tabelas, seções e diagramas PlantUML embutidos.
+- Arquivo único **/docs/BusinessRules.md** com sumário (TOC), tabelas, seções e diagramas Mermaid embutidos.

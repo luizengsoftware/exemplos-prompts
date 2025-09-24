@@ -13,7 +13,7 @@ Produto esperado (gerar em /docs/Architecture.md):
   - Variáveis de ambiente, secrets (apenas nomes), feature flags.
 - Estilo Arquitetural
   - Padrões adotados (DDD, Clean, Hexagonal, MVC, Monolito, Microservices, Serverless, etc.).
-- Diagramas C4 em **PlantUML (C4-PlantUML)**
+- Diagramas C4 em **Mermaid (C4)**
   - C1: System Context.
   - C2: Containers (APIs, jobs, DBs, caches, mensageria, etc.).
   - C3: Componentes críticos.
