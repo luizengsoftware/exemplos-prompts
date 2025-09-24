@@ -1,10 +1,10 @@
 #Prompt 3 — Plano de Desenvolvimento Passo a Passo
 
-Contexto: Com base nas Regras de Negócio (/docs/BusinessRules.md) e Arquitetura (/docs/Architecture.md), gere um plano prático de evolução do projeto.
+Contexto: Com base nas Regras de Negócio (/docs/RegrasDeNegocio.md) e Arquitetura (/docs/Arquitetura.md), gere um plano prático de evolução do projeto.
 
 Objetivo: Entregar um roteiro acionável (do setup ao deploy), priorizado e mensurável, apto a ser executado por um time (.NET/C#) em sprints.
 
-Produto esperado (crie em /docs/DevelopmentPlan.md):
+Produto esperado (crie em /docs/PlanoDeDesenvolvimento.md):
 1) "Objetivos & Métricas" (OKRs/KPIs propostos, ex.: lead time, cobertura de testes, p95 de latência, erro %).
 2) "Backlog Prioritário" (MoSCoW ou RICE):
    - Tabela: ID | Item | Motivo/Impacto | Esforço estimado (SP ou hm) | Dependências | Critérios de Aceite.
@@ -34,4 +34,4 @@ Guidelines de geração:
 - Idioma: pt-BR, conciso e técnico.
 
 Saída final:
-- Arquivo único **/docs/DevelopmentPlan.md** com TOC, tabelas, checklists e links para os documentos gerados.
+- Arquivo único **/docs/PlanoDeDesenvolvimento.md** com TOC, tabelas, checklists e links para os documentos gerados.

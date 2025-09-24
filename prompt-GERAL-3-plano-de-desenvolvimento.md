@@ -1,10 +1,10 @@
 #Prompt 3 — Plano de Desenvolvimento Passo a Passo
 
-Contexto: Com base nos docs gerados (/docs/BusinessRules.md e /docs/Architecture.md), monte um plano prático de desenvolvimento/evolução para o projeto, independente da linguagem ou tecnologia usada.
+Contexto: Com base nos docs gerados (/docs/RegrasDeNegocio.md e /docs/Arquitetura.md), monte um plano prático de desenvolvimento/evolução para o projeto, independente da linguagem ou tecnologia usada.
 
 Objetivo: Fornecer um roteiro passo a passo para execução por um time de engenharia.
 
-Produto esperado (gerar em /docs/DevelopmentPlan.md):
+Produto esperado (gerar em /docs/PlanoDeDesenvolvimento.md):
 1) Objetivos & Métricas (OKRs/KPIs técnicos e de negócio).
 2) Backlog Prioritário (tabela: ID | Item | Motivo | Esforço | Dependências | Critérios de Aceite).
 3) Roadmap por fases/sprints (Setup → Fundamentos → Funcionalidades → Hardening → Go-live).

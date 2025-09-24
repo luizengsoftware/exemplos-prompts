@@ -12,7 +12,7 @@ Escopo de análise (priorize em ordem):
 5) Integrações externas (HTTP, mensageria, jobs, caches).
 6) Documentos *.md (README, ADRs), appsettings*.json, Feature Flags, testes (unit/integration/e2e).
 
-Produto esperado (crie em /docs/BusinessRules.md):
+Produto esperado (crie em /docs/RegrasDeNegocio.md):
 - "Resumo Executivo" (1–2 parágrafos).
 - "Glossário" (Termo/Definição/Referência de código).
 - "Atores e Permissões" (tabela: Ator | Responsabilidades | Permissões | Arquivos/linhas).
@@ -35,4 +35,4 @@ Qualidade/checagens:
 - Use português (pt-BR) técnico, referências de código no formato `caminho:linha-inicial–linha-final`.
 
 Saída final:
-- Arquivo único **/docs/BusinessRules.md** com sumário (TOC), tabelas, seções e diagramas Mermaid embutidos.
+- Arquivo único **/docs/RegrasDeNegocio.md** com sumário (TOC), tabelas, seções e diagramas Mermaid embutidos.

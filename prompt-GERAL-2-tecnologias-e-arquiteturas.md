@@ -4,7 +4,7 @@ Contexto: Analise todos os diretórios e arquivos do repositório para identific
 
 Objetivo: Mapear tecnologias e arquiteturas adotadas, documentando e ilustrando em modelo C4.
 
-Produto esperado (gerar em /docs/Architecture.md):
+Produto esperado (gerar em /docs/Arquitetura.md):
 - Stack & Dependências
   - Linguagens e versões detectadas.
   - Frameworks e bibliotecas principais.

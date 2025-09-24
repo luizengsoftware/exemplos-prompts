@@ -4,7 +4,7 @@ Contexto: Projeto .NET/C#. Analise todos os arquivos relevantes: *.sln, *.csproj
 
 Objetivo: Mapear tecnologias, dependências e decisões arquiteturais e gerar diagramas no modelo **C4** (C1/C2/C3) com Mermaid (C4).
 
-Produto esperado (crie em /docs/Architecture.md):
+Produto esperado (crie em /docs/Arquitetura.md):
 - "Stack & Dependências"
   - Tabelas: Linguagens & versões (.NET SDK/TargetFramework), Frameworks (ASP.NET Core, EF Core, etc.), Pacotes NuGet (Nome | Versão | Uso | Projeto), Banco(s) de dados, Mensageria, Cache, Observabilidade, Autenticação/Autorização, Cloud/Infra.
 - "Configuração & Ambientes"
@@ -31,4 +31,4 @@ Qualidade/checagens:
 - Marque **Decisões de Segurança** (auth, autorização, secrets, CORS, headers, TLS) e **Observabilidade** (logs, tracing, métricas).
 
 Saída final:
-- Arquivo único **/docs/Architecture.md** com TOC, tabelas e diagramas C4 em Mermaid.
+- Arquivo único **/docs/Arquitetura.md** com TOC, tabelas e diagramas C4 em Mermaid.

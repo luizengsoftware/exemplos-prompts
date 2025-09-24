@@ -4,7 +4,7 @@ Contexto: Você é uma IA analista de código com acesso somente-leitura ao work
 
 Objetivo: Extrair e documentar TODAS as regras de negócio implementadas e pretendidas, entregando uma visão funcional completa.
 
-Produto esperado (gerar em /docs/BusinessRules.md):
+Produto esperado (gerar em /docs/RegrasDeNegocio.md):
 - Resumo executivo (1–2 parágrafos).
 - Glossário de termos de negócio (Termo | Definição | Referências no código).
 - Atores e Permissões (tabela: Ator | Responsabilidades | Permissões | Arquivos/linhas).
