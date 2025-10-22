@@ -241,6 +241,39 @@ Resultado:
 - 12 gráficos Mermaid
 - Roadmap de 6 meses
 - KPIs e recomendações
+
+Exemplo de Saída - TOP 3 Problemas DEPOSITÁRIA:
+
+🔴 1. Gestão de Eventos Financeiros (8 chamados)
+Causa Raiz: Engine complexa sem documentação, cálculos descentralizados
+Exemplos:
+- MONIT-8530: Tela de eventos financeiros não está funcionando
+- MONIT-8541: IFs não refletem a agenda de eventos de Juros - Energisa
+- MONIT-8560: CLONE - IF não reflete a agenda de eventos de Juros
+- MONIT-8564: CLONE - Eventos não constam na tela de Eventos Financeiros
+- MONIT-8516: Exclusão de eventos de juros triplicados - LNC002502407
+- MONIT-8517: Excluir eventos duplicados - LNC002301233
+Impacto: 🔴 CRÍTICO - Afeta cálculos financeiros e relatórios
+
+🔴 2. Arquivos de Conciliação (12 chamados)
+Causa Raiz: Processo não idempotente, transações longas, falta de retry
+Exemplos:
+- MONIT-8654: Disponibilizar arquivos de conciliação para escrituradores
+- MONIT-8661: Melhorar rotina de geração de arquivos de conciliação
+- MONIT-8662: Disponibilizar arquivos de conciliação - 08/10
+- MONIT-8575: Conciliações geradas indevidamente aos Participantes
+- MONIT-8666: CLONE - Conciliações geradas indevidamente
+- MONIT-8640: Arquivos não foram gerados ao Participante Daycoval
+Impacto: 🔴 CRÍTICO - Impede conciliação diária
+
+🟡 3. Edição de Operações IMF (6 chamados)
+Causa Raiz: Validações restritivas, locks não liberados
+Exemplos:
+- MONIT-8572: Não conseguimos editar instrumentos financeiros - IMF
+- MONIT-8625: ERRO PARA EDITAR E CORRIGIR OPERAÇÕES - IMF
+- MONIT-8706: CLONE - ERRO PARA EDITAR E CORRIGIR OPERAÇÕES
+- MONIT-8532: Erro ao Transferir titularidade - LCF002500001
+Impacto: 🟡 ALTO - Bloqueia correções urgentes
 ```
 
 ### Exemplo 2: Análise de Produtividade Semanal
@@ -257,6 +290,37 @@ Resultado:
 - 1 CSV com dados brutos
 - Análise por responsável e sprint
 - Insights de produtividade
+
+Exemplo de Saída - TOP 3 Desenvolvedores:
+
+🥇 1. Joelson Cerqueira - 18 chamados resolvidos
+Sprint 21: 12 chamados (66.7%)
+Sprint 20: 6 chamados (33.3%)
+Especialização: DEPOSITÁRIA (83.3%)
+Exemplos:
+- MONIT-8654: Disponibilizar arquivos de conciliação ✅ Pronto
+- MONIT-8661: Melhorar rotina de geração de arquivos ✅ Pronto
+- MONIT-8667: Realizar baixa de conciliações em lote ✅ Pronto
+Taxa de Conclusão: 94.4%
+
+🥈 2. Luiz Silva - 14 chamados resolvidos
+Sprint 21: 8 chamados (57.1%)
+Sprint 22: 6 chamados (42.9%)
+Especialização: ADMIN (50%), MONITOR (35.7%)
+Exemplos:
+- MONIT-8675: Criar usuário conforme padrão Iveco/CNH ✅ Pronto
+- MONIT-8678: Habilitar Módulo Contábil [Airela] ✅ Pronto
+- MONIT-8695: Alterar emissor da operação LNC002503124 🔄 Desenvolvimento
+Taxa de Conclusão: 85.7%
+
+🥉 3. Deividy Ferreira - 8 chamados resolvidos
+Sprint 19: 4 chamados (50%)
+Sprint 20: 4 chamados (50%)
+Especialização: ESCRITURAÇÃO (62.5%), DEPOSITÁRIA (37.5%)
+Exemplos:
+- MONIT-8542: Cadastro de Instituição Financeira (FIDD) ✅ Pronto
+- MONIT-8524: Popular banco de dados para Cota de Fundo ✅ Pronto
+Taxa de Conclusão: 100%
 ```
 
 ### Exemplo 3: Análise Customizada por Módulo
@@ -273,6 +337,48 @@ Resultado:
 - 1 CSV com dados por módulo
 - 1 CSV com resumo por módulo
 - Análise de módulos críticos
+
+Exemplo de Saída - Ranking por Módulo:
+
+🔴 1. DEPOSITÁRIA - 82 chamados (56.9%)
+Prioridade Highest: 24 (29.3%)
+Bugs: 22 (26.8%)
+Taxa de Resolução: 56.1%
+Status: CRÍTICO - Requer ação imediata
+
+Principais Problemas:
+- Eventos Financeiros: 8 chamados
+  * MONIT-8530, 8541, 8560, 8564, 8516, 8517, 8506, 8529
+- Conciliações: 12 chamados
+  * MONIT-8654, 8661, 8662, 8575, 8666, 8640, 8653, 8643
+- Edição de IFs: 6 chamados
+  * MONIT-8572, 8625, 8706, 8532, 8562, 8563
+
+🟡 2. ADMIN - 13 chamados (9.0%)
+Prioridade Highest: 4 (30.8%)
+Bugs: 3 (23.1%)
+Taxa de Resolução: 76.9%
+Status: ALTO - Monitoramento necessário
+
+Principais Problemas:
+- Cadastros: 3 chamados
+  * MONIT-8507, 8603, 8566
+- BaaS BMP: 5 chamados
+  * MONIT-8652, 8683, 8702, 8559, 8561
+
+🟡 3. MONITOR - 13 chamados (9.0%)
+Prioridade Highest: 6 (46.2%)
+Bugs: 5 (38.5%)
+Taxa de Resolução: 61.5%
+Status: ALTO - Problemas de relatórios
+
+Principais Problemas:
+- Relatório de Posição: 3 chamados
+  * MONIT-8649, 8664, 8677
+- Integração IMF: 2 chamados
+  * MONIT-8614, 8615
+- Dados de Mercado: 3 chamados
+  * MONIT-8494, 8680, 8648
 ```
 
 ---
