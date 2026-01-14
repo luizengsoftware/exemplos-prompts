@@ -6,6 +6,7 @@ Preciso investigar a seguinte rota da aplicação:
 Analise todas as camadas desde o Controller até o banco de dados:
 - Controllers e parâmetros de entrada
 - Application Services e lógica de negócio
+- Utilização de cache, chaves, aonde é criado e aonde é utilizado
 - Repositories e queries ao banco
 - Serviços externos chamados
 
