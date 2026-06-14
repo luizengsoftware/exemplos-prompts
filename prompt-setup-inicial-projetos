@@ -1,0 +1,198 @@
+Quero que você configure neste projeto um fluxo padronizado de implementação com planejamento, brainstorming, execução e code review iterativo, seguindo SOLID, Clean Architecture, Clean Code, DRY e KISS.
+
+Regras gerais:
+- Responda sempre em português.
+- Não invente capabilities inexistentes.
+- Se alguma skill, comando ou integração não existir de fato, pare e informe com objetividade.
+- Não use `skill-generator`, porque ele não existirá neste ambiente.
+- A criação de skills do projeto deve ser feita via `skill-creator`.
+- Antes de qualquer implementação funcional, deve haver uma etapa obrigatória de brainstorming/design.
+- Após cada implementação, execute obrigatoriamente um ciclo de review.
+- Se o review apontar problemas críticos ou importantes, corrija tudo antes de seguir.
+- Repita o ciclo `review -> correção -> novo review` até não restarem achados relevantes.
+- Se houver collection Postman, documentação operacional ou arquivos auxiliares do fluxo, mantenha tudo sincronizado com a implementação.
+- Não reverta mudanças do usuário sem autorização explícita.
+- Ao final de cada etapa, informe arquivos alterados, validações executadas e riscos residuais.
+
+Objetivo:
+- Instalar primeiro as skills externas necessárias.
+- Garantir que `skill-creator`, `brainstorming` e `requesting-code-review` estejam disponíveis antes do restante do fluxo.
+- Usar a `skill-creator` para criar as skills locais do projeto.
+- Tornar obrigatório o fluxo:
+  - brainstorming
+  - plano
+  - implementação
+  - validação
+  - review
+  - correção
+  - novo review
+- Encerrar cada implementação apenas quando os achados relevantes estiverem zerados.
+
+Passo 1. Instalação obrigatória inicial
+A primeira coisa que você deve fazer, antes de qualquer análise mais profunda, é instalar as skills externas obrigatórias a partir do repositório `superpowers`, exatamente nesta ordem:
+
+1. Instalar `skill-creator`:
+   `npx skills add https://github.com/obra/superpowers --skill skill-creator`
+
+2. Validar se a skill foi realmente instalada no projeto e em qual caminho ela ficou disponível.
+
+3. Ler o conteúdo da skill instalada para entender como ela deve ser usada.
+
+4. Instalar `brainstorming`:
+   `npx skills add https://github.com/obra/superpowers --skill brainstorming`
+
+5. Validar se a skill foi realmente instalada no projeto e em qual caminho ela ficou disponível.
+
+6. Ler o conteúdo da skill instalada para entender como ela deve ser usada.
+
+7. Instalar `requesting-code-review`:
+   `npx skills add https://github.com/obra/superpowers --skill requesting-code-review`
+
+8. Validar se a skill foi realmente instalada no projeto e em qual caminho ela ficou disponível.
+
+9. Ler o conteúdo da skill instalada para entender como ela deve ser usada.
+
+Regras deste passo:
+- Não pule nenhuma dessas instalações.
+- Não trate essas skills como nativas sem validar.
+- Não prossiga para criação de workflow sem antes validar as 3 instalações.
+- Se qualquer uma delas não existir nesse repositório, falhar na instalação ou não ficar disponível no projeto, pare imediatamente e informe:
+  - o que foi tentado
+  - o erro encontrado
+  - por que isso bloqueia o fluxo esperado
+  - qual seria o fallback manual mais seguro, mas sem executá-lo antes da minha confirmação
+
+Passo 2. Descoberta do contexto do projeto
+Somente após instalar e validar `skill-creator`, `brainstorming` e `requesting-code-review`:
+- inspecione a estrutura do projeto
+- identifique stack, arquitetura, convenções, padrões de pasta e artefatos auxiliares
+- verifique se já existe `.agents`, `.trae`, `docs`, `collections`, `postman` ou equivalente
+- identifique se já existem skills locais
+- informe o que é nativo do ambiente e o que foi instalado externamente
+
+Passo 3. Uso obrigatório da skill de brainstorming
+Antes de qualquer implementação funcional:
+- use obrigatoriamente a skill `brainstorming`
+- explore contexto, objetivo, restrições e impacto
+- proponha abordagens com trade-offs
+- apresente um design curto e objetivo
+- obtenha alinhamento antes de implementar
+
+Se a plataforma não permitir invocação direta da skill, aplique manualmente o protocolo descrito nela como etapa obrigatória.
+
+Passo 4. Uso obrigatório da skill-creator
+Como `skill-generator` não existirá, você deve usar a `skill-creator` para preparar as skills locais do projeto.
+
+Objetivo:
+- criar skills específicas do projeto para:
+  - planning
+  - execution
+  - review
+
+Local preferencial:
+- `.agents/skills/<nome-da-skill>/SKILL.md`
+
+As skills devem refletir:
+- stack real do projeto
+- convenções reais do repositório
+- padrões de arquitetura usados
+- fluxo de validação esperado
+- necessidade de manter docs e collections sincronizados
+
+A skill de planning deve cobrir:
+- exploração de contexto
+- análise de impacto
+- plano de implementação
+- dependências e riscos
+
+A skill de execution deve cobrir:
+- implementação aderente ao projeto
+- preservação de contratos
+- validação técnica
+- atualização de artefatos relacionados
+
+A skill de review deve cobrir:
+- bugs reais
+- regressões
+- impacto funcional
+- coerência arquitetural
+- contratos
+- tratamento de erro
+- lacunas de teste
+- consistência entre código, docs e collections
+
+Passo 5. Protocolo obrigatório para toda nova demanda
+Para qualquer implementação futura, siga exatamente esta ordem:
+
+1. Explorar o contexto e os arquivos impactados.
+2. Executar brainstorming/design obrigatório.
+3. Apresentar um plano curto e objetivo.
+4. Implementar somente após alinhamento.
+5. Validar com lint, diagnósticos, testes ou checks pertinentes ao projeto.
+6. Executar review obrigatório.
+7. Corrigir todos os apontamentos relevantes.
+8. Executar novo review.
+9. Repetir o ciclo até zerar críticos e importantes.
+10. Atualizar documentação, collection Postman e artefatos auxiliares afetados.
+
+Passo 6. Protocolo obrigatório de review
+Sempre que concluir uma implementação:
+- acione a skill `requesting-code-review`, se a plataforma permitir
+- se a plataforma não permitir invocação direta, aplique manualmente o protocolo descrito nela
+- o review deve considerar:
+  - alinhamento com requisitos
+  - regressões de comportamento
+  - impacto real no fluxo de negócio
+  - contratos de API
+  - tratamento de erro
+  - tipagem
+  - aderência arquitetural
+  - cobertura de testes relevante
+  - sincronização de documentação e collections
+
+Classifique os apontamentos em:
+- críticos
+- importantes
+- menores
+
+Regras:
+- críticos e importantes devem ser corrigidos antes de seguir
+- após corrigir, rode novo review
+- só encerre quando não houver mais achados relevantes
+- se algum apontamento parecer incorreto, apresente justificativa técnica objetiva antes de descartá-lo
+
+Passo 7. Sincronização de artefatos
+Sempre que uma implementação alterar comportamento real do sistema:
+- atualize a collection Postman, se existir
+- atualize documentação operacional, se existir
+- atualize exemplos de payload/request/response, se existirem
+- mantenha tudo coerente com o fluxo real do app
+- trate estes artefatos como parte obrigatória da entrega
+
+Passo 8. Entrega esperada ao final da configuração
+Quando terminar a preparação do fluxo, entregue:
+- skills instaladas externamente
+- caminhos das skills instaladas
+- skills locais criadas no projeto
+- caminhos dos arquivos criados ou alterados
+- resumo do protocolo que será seguido daqui para frente
+- limitações encontradas no ambiente
+- confirmação explícita de que o fluxo futuro será:
+  - instalar skills obrigatórias
+  - brainstorming
+  - planejar
+  - implementar
+  - validar
+  - revisar
+  - corrigir
+  - revisar novamente
+  - encerrar apenas quando zerar os achados relevantes
+
+Critério de aceite:
+Considere a configuração concluída somente quando:
+- a `skill-creator` tiver sido instalada primeiro e validada
+- a `brainstorming` tiver sido instalada e validada
+- a `requesting-code-review` tiver sido instalada e validada
+- as skills locais do projeto tiverem sido criadas via `skill-creator`
+- o fluxo de brainstorming, implementação e review estiver definido
+- houver confirmação explícita de que nenhuma nova implementação será iniciada sem brainstorming e nenhuma será encerrada sem o ciclo completo de review até zerar apontamentos relevantes
